@@ -25,17 +25,17 @@ No PHP binary, tests, or linter are configured. The only check available is `php
 - index.php lists games. detalhes.php shows one game.
 - game-new.php, game-edit.php, game-delete.php are the game actions. game-new-form.php and game-edit-form.php are their forms.
 - game-crud-script.php holds the JS for edit and delete. It is loaded only for admins.
-- user-login.php, user-logout.php, user-new.php, user-edit.php and their -form.php files handle users.
+- user-login.php, user-logout.php, user-new.php, user-edit.php and the user-*-form.php files handle users.
 - _modelo.php is the page template. Copy it for a new page.
 - css/styles.css, icons/, images/ for assets. Cover images are uploaded into images/.
 
 ## Page conventions
 
 - Each page is a full HTML document.
-- It starts with require_once of banco.php, login.php, and functions.php, in that order.
+- It starts with require_once of includes/banco.php, includes/login.php, and includes/functions.php, in that order.
 - It renders inside div#app and uses the Material Icons font.
 - A page ends with voltar() for the back link.
-- A POST handler and its form are split: the page requires the -form.php file when no POST data is present.
+- A POST handler and its form are split: the page requires the matching form file when no POST data is present.
 
 ## Auth and roles
 
